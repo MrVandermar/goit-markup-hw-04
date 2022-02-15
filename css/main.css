@@ -18,6 +18,7 @@
   --footer-white-color: rgba(255, 255, 255, 0.6);
   --button-accent-color: #188ce8;
   --our-team-background: #f5f4fa;
+  --hero-background-color: #c4c4c4;
 }
 
 /* глобальные селекторы */
@@ -71,10 +72,6 @@ body {
   padding-bottom: 94px;
 }
 
-/* .footer-main {
-  padding-top: 60px;
-  padding-bottom: 60px;
-} */
 .header-main {
   display: flex;
   justify-content: space-between;
@@ -143,20 +140,39 @@ body {
 .nav-contact-header {
   display: flex;
   align-items: center;
-  margin-left: 330px;
+  margin-left: 305px;
 }
 
 .nav-contact-item + .nav-contact-item {
-  margin-left: 50px;
+  margin-left: 30px;
 }
 .nav-contact-list {
-  /* display: block; */
+  display: inline-flex;
+  align-items: center;
 
   color: var(--information-text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   /* background-color: tomato; */
+}
+.icon-mail::before {
+  content: "";
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-image: url(../image/header-contacts/mail.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.icon-tel::before {
+  content: "";
+  width: 10px;
+  height: 12px;
+  margin-right: 10px;
+  background-image: url(../image/header-contacts/tell.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .nav-contact-list:hover,
@@ -199,21 +215,22 @@ body {
 .footer-item + .footer-item {
   margin-top: 9px;
 }
-/* .footer-list:first-child {
-  margin-bottom: 9px; */
-
-/* .footer-contacts:last-child {
-  margin-bottom: 0; */
-/* } */
 
 /* герой */
 
 .hero {
+  max-width: 1600px;
+  height: 600px;
+  background-image: url(../image/hero-BG.jpg);
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding-top: 200px;
   padding-bottom: 200px;
 
   background-color: var(--background-second-color);
-
   text-align: center;
 }
 .title-hero {
@@ -260,6 +277,27 @@ body {
 }
 .dignity-unit {
   width: 270px;
+}
+.dignity-unit::before {
+  content: "";
+  display: block;
+  background-color: var(--our-team-background);
+  height: 120px;
+  margin-bottom: 30px;
+  background-image: url(../image/our-dignity/antena.svg);
+  /* background-size: contain; */
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: contain;
+}
+.dignity-unit:nth-child(2)::before {
+  background-image: url(../image/our-dignity/clock\ 1.svg);
+}
+.dignity-unit:nth-child(3)::before {
+  background-image: url(../image/our-dignity/Vector.svg);
+}
+.dignity-unit:nth-child(4)::before {
+  background-image: url(../image/our-dignity/astronaut\ 1.svg);
 }
 .dignity-unit + .dignity-unit {
   margin-left: 30px;
@@ -352,6 +390,40 @@ body {
 .our-team-info {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+.our-team-cotacts {
+  display: inline-flex;
+  width: 206px;
+  justify-content: space-between;
+  padding-left: 0;
+  margin-top: 16px;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.our-team-cotacts > li {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  list-style-type: none;
+}
+.our-team-cotacts > li:last-child {
+  margin-right: 0;
+}
+.our-team-insta {
+  background-image: url(../image/our-team/instagram.svg);
+}
+.our-team-twitter {
+  background-image: url(../image/our-team/twitter.svg);
+}
+.our-team-fb {
+  background-image: url(../image/our-team/facebook.svg);
+}
+.our-team-in {
+  background-image: url(../image/our-team/linkedin.svg);
 }
 
 /* портфолио кнопки */
